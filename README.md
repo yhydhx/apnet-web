@@ -1,2 +1,2 @@
 # apnet-web
-Website for APNet
+[APNET 2017](http://conferences.sigcomm.org/events/apnet2017)
