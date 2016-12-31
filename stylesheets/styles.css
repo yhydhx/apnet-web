@@ -157,6 +157,11 @@ img {
   max-width:100%;
 }
 
+.mylogos {
+    display: block;
+    margin: 0 auto;
+}
+
 header {
   width:270px;
   float:left;
