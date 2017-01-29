@@ -9,6 +9,55 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
+    <style>
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        /*background-color: #333;*/
+      }
+
+      ul.topnav li {float: left;}
+
+      ul.topnav li a {
+        display: inline-block;
+        /*color: #f2f2f2;*/
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: 0.3s;
+        font-size: 17px;
+      }
+
+      ul.topnav li.icon {display: none;}
+
+      @media screen and (max-width:680px) {
+        ul.topnav li:not(:first-child) {display: none;}
+        ul.topnav li.icon {
+          float: right;
+          display: inline-block;
+        }
+      }
+
+      @media screen and (max-width:680px) {
+        ul.topnav.responsive {position: relative;}
+        ul.topnav.responsive li.icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        ul.topnav.responsive li {
+          float: none;
+          display: inline;
+        }
+        ul.topnav.responsive li a {
+          display: block;
+          text-align: left;
+        }
+      }
+    </style>
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -107,6 +156,7 @@ major conferences such as SIGCOMM, SOSP, OSDI, NSDI, MobiCom, CoNEXT and so on.<
         </section>
 
         <aside id="sidebar">
+        <ul class="topnav" id="myTopnav">
           <a href="index.html" class="button">
             Home
           </a>
@@ -123,14 +173,14 @@ major conferences such as SIGCOMM, SOSP, OSDI, NSDI, MobiCom, CoNEXT and so on.<
           <a href="cfposter.html" class="button">
             Call For Posters
           </a>
-
+        </ul>
+          
           <h3>Sponsored by</h3>
-          <p><a href="http://www.cse.ust.hk/"><img src="images/cse.png" align="middle" style="width: 100%;"></a></p>
+          <p><a href="http://www.cse.ust.hk/"><img src="images/cse.png" align="middle" style="width: 100%;max-width: 300px"></a></p>
 
           <h3>In-cooperation with</h3>
-          <p><a href="https://www.acm.org"><img src="images/acmcoop.gif" align="middle" style="width: 100%;"></a></p>
-          <p><a href="http://www.sigcomm.org/"><img src="images/sigcomm.png" align="middle" style="width: 50%;"></a></p>
-          <p><a href="https://www.sigmobile.org/"><img src="images/sigmobile.gif" align="middle" style="width: 50%;"></a></p>
+          <p><a href="https://www.acm.org"><img src="images/acmcoop.gif" align="middle" style="width: 100%; max-width: 300px"></a></p>
+          <p><a href="http://www.sigcomm.org/"><img src="images/sigcomm.png" align="middle" style="width: 50%; max-width: 100px"></a> <a href="https://www.sigmobile.org/"><img src="images/sigmobile.gif" align="middle" style="width: 50%; max-width: 100px"></a></p>
 
           <!--<p class="repo-owner"><a href="https://github.com/li-ch/apnet-web"></a> is maintained by <a href="https://github.com/li-ch">li-ch</a>.</p>-->
 
@@ -146,6 +196,15 @@ major conferences such as SIGCOMM, SOSP, OSDI, NSDI, MobiCom, CoNEXT and so on.<
 
   ga('create', 'UA-86116387-1', 'auto');
   ga('send', 'pageview');
+
+  function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+          x.className += " responsive";
+      } else {
+          x.className = "topnav";
+      }
+  }
 </script>
   </body>
 </html>
